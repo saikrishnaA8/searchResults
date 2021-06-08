@@ -1,0 +1,94 @@
+.spinner-border {
+    width: 4rem;
+    height: 4rem;
+}
+
+.charValidate {
+    margin-left: -1.5em;
+    margin-top: 1em;
+}
+body {
+    font-family: Arial;
+    background: linear-gradient(130deg,#020024,#d63770 41.07%,#2992a7 76.05%);
+    display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; overflow-y:hidden;
+    height:100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  div.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    background: #f1f1f1;
+    border-radius: 21px;
+    width: 100%;
+      padding-right: 79px;
+  }
+  input:focus { outline: none; }
+  
+  div.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: grey;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    position: relative;
+      right: 49px;
+      border-radius: 13px;
+  }
+  
+  div.example button:hover {
+    background: grey;
+  }
+  
+  div.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .bottom-cont {
+    background-color: #202020;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: 202020;
+    color: white;
+    text-align: center;
+}
+.head-cont {
+    background-color: #202020;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: 202020;
+    color: white;
+    text-align: center;
+}
+.center-spin {
+    position: absolute;
+    width: 100%;
+} 
+.close-SR {
+    position: absolute;
+    margin-left: -3.5em;
+    margin-top: 1em;
+}
+.search-SR {
+    position: absolute;
+    margin-left: -2.5em;
+    margin-top: 1em;
+}

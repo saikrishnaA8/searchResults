@@ -1,3 +1,7 @@
-<p>
-  smart-search-results works!
-</p>
+<div class="cont-search-result" *ngIf="searchResults.length">
+<div class="result-main-container" *ngFor="let results of searchResults  | slice:0:20; let i=index">
+  <div>{{ results?.name }}</div>
+  <div>{{ results?.email }}</div>
+  <div>{{  (results?.body.length>60)? (results?.body | slice:0:60)+'...':(results?.body) }}</div>
+</div>
+</div>

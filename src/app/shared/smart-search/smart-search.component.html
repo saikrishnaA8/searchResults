@@ -3,57 +3,42 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-div.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-  border-radius: 13px;
-}
-
-div.example button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-  position: relative;
-    right: 18px;
-}
-
-div.example button:hover {
-  background: #0b7dda;
-}
-
-div.example::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
 </head>
+<div class="header-TG"></div>
 <body>
-
-
-<div class="example" style="margin:auto;max-width:300px">
-  <input type="text" placeholder="Search.." name="search2">
-  <button type="submit"><i class="fa fa-search"></i></button>
+    <div class="head-cont">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <span>Search Criterion</span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+<div class="example" style="margin:auto;max-width: 39%;padding-top: 10em;">
+  <input type="text" placeholder="Type Characters To Start Search.." name="search2"  [(ngModel)]="textValue" (ngModelChange)="setSearchValue($event)">
+  <i class="fa fa-info-circle charValidate" title="Please Enter More Than Three Characters To Search"></i>
+  <i class="fa fa-times close-SR"  *ngIf="textValue" (click)="clearResult()"></i>
+  <i class="fa fa-search search-SR"  (click)="setSearchValue(textValue)"></i>
 </div>
-
+<div class="text-center center-spin" *ngIf="resultValue">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<app-smart-search-results></app-smart-search-results>
+<div class="bottom-cont">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <span>Search Criterion</span>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>
 </body>
 </html> 
